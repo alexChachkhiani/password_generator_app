@@ -5,8 +5,11 @@ const includeNumbers = document.getElementById("include-numbers");
 const includeSymbols = document.getElementById("include-symbols");
 const generateButton = document.querySelector("button");
 const password = document.getElementById("password");
+const copyIcon = document.getElementById("copy-icon");
+const copiedText = document.getElementById("copied-text");
 
 let passwordStrength = document.getElementById("password-strength");
+let iconClicked = false;
 
 function passwordGenerator() {
     let characterSet = "";
@@ -57,3 +60,14 @@ function passwordGenerator() {
         passwordStrength.innerText = "STRONG!";
     }
 }
+
+function copyPassword() {
+    navigator.clipboard.writeText(password.innerText);
+}
+
+copyIcon.addEventListener("click", function handleClick() {
+    iconClicked = true;
+    if (iconClicked) {
+        copiedText.style.display = "block";
+    }
+})
