@@ -11,7 +11,7 @@ const barOne = document.getElementById("bar-1");
 const barTwo = document.getElementById("bar-2");
 const barThree = document.getElementById("bar-3");
 const barFour = document.getElementById("bar-4");
-
+const lengthNumber = document.getElementById("length-number");
 
 let passwordStrength = document.getElementById("password-strength");
 let iconClicked = false;
@@ -90,6 +90,9 @@ function passwordGenerator() {
         barThree.style.background = "#A4FFAF";
         barFour.style.background = "#A4FFAF";
     }
+
+    lengthNumber.innerText = passwordLength.value;
+    // console.log(passwordLength.value);
 }
 
 function copyPassword() {
