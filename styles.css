@@ -1,0 +1,7 @@
+.bar {
+  width: 10px;
+  height: 28px;
+  flex-shrink: 0;
+  border: 2px solid black;
+  color: brown;
+}
